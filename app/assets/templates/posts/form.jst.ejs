@@ -1,0 +1,17 @@
+<ul class="errors">
+  <% errors.forEach( function(error) {%>
+    <li><%= error %></li>
+  <%})%>
+</ul>
+
+<form class="post-form" action="" method="post">
+  <label>Title
+    <input type="text" name="post[title]" value="<%= post.escape('title')%>">
+  </label>
+  <br>
+  <label>Body
+    <textarea type="text" name="post[body]"><%= post.escape('body')%></textarea>
+  </label>
+
+  <input type="submit" value="Submit Post" class="submit-button">
+</form>

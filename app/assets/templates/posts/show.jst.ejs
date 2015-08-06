@@ -1,0 +1,5 @@
+<h3 class="post-title"><%= post.escape('title')%></h3>
+<p class="post-body"><%= post.escape('body')%></p>
+<a href=""><p>Return to Index</p></a>
+<a href="<%="/#posts/" + post.escape('id') + "/edit"%>">Edit post</a>
+<button class="delete-post">Delete this post</button>
