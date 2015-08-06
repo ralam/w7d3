@@ -35,6 +35,7 @@ JournalApp.Views.PostShow = Backbone.View.extend({
     $(".post-title").empty();
     var formEl = this.titleTemplate({post: this.model});
     $(".post-title").html(formEl);
+    $("input").focus();
   },
 
   editBody: function(event) {
@@ -44,6 +45,7 @@ JournalApp.Views.PostShow = Backbone.View.extend({
     $(".post-body").empty();
     var formEl = this.bodyTemplate({post: this.model});
     $(".post-body").html(formEl);
+    $("textarea").focus();
   },
 
   save: function(event) {
